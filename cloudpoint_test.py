@@ -185,8 +185,9 @@ def display_frame_statistics(dataset, tracklet_rects, tracklet_types, frame, poi
     f2 = plt.figure(figsize=(15, 8))
     ax2 = f2.add_subplot(111, projection='3d')
     draw_point_cloud(ax2, 'Velodyne scan', xlim3d=(-10, 30))
-    plt.show()
     plt.savefig('ground.png')
+    plt.show()
+
 
     def draw_point_cloud_remove_ground(ax, title, axes=[0, 1, 2], xlim3d=None, ylim3d=None, zlim3d=None):
         """
@@ -250,8 +251,9 @@ def display_frame_statistics(dataset, tracklet_rects, tracklet_types, frame, poi
     f3 = plt.figure(figsize=(15, 8))
     ax3 = f3.add_subplot(111, projection='3d')
     draw_point_cloud_remove_ground(ax3, 'Velodyne scan', xlim3d=(-10, 30))
-    plt.show()
     plt.savefig('noground.png')
+    plt.show()
+
 
 frame = 1
 
